@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     height: 40px;
+    min-width: 1080px;
     background-color: $opgg-color-bg2;
 
     .opgg-logo {
@@ -20,6 +21,8 @@
         display: flex;
         margin-left: 98px;
         margin-right: 50px;
+        z-index: 1000;
+
         .game-item {
             display: flex;
             margin: 4px;
@@ -42,8 +45,8 @@
                 font-size: 12px;
                 margin-left: 8px;
                 vertical-align: middle;
-                &.qwer,
-                &.duo {
+                overflow: hidden;
+                &.new {
                     &::before {
                         content: 'N';
                         margin-right: 4px;
@@ -59,7 +62,7 @@
                     }
                 }
 
-                &.valolant {
+                &.beta {
                     &::before {
                         content: 'Beta';
                         margin-right: 4px;
@@ -75,6 +78,37 @@
                     }
                 }
             }
+        }
+    }
+
+    // 헤더 우측 언어 선택 및 로그인 버튼 영역
+    .select-language-area {
+        display: flex;
+        flex-shrink: 0;
+        top: 0;
+        right: 0;
+        height: 32px;
+        line-height: 32px;
+        font-size: 12px;
+        color: $color-text3;
+        .ico-earth {
+            margin: auto 4px;
+        }
+        .language-item {
+            margin: 0 8px;
+            .ico-triangle-down {
+                padding: 1px;
+                margin: auto 4px;
+            }
+        }
+        .login {
+            display: inline-block;
+            margin: 4px 0;
+            padding: 0 16px;
+            line-height: 26px;
+            letter-spacing: -0.5px;
+            border-radius: 5px;
+            background-color: $opgg-color-bg1;
         }
     }
 

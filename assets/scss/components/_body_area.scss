@@ -1,6 +1,5 @@
 .body-area {
     @include common-inner;
-    
     // 화면 상단의 그림 로고 영역 스타일링 
     .main-logo {
         padding: 32px 0 24px;
@@ -164,6 +163,7 @@
             justify-content: space-between;
             .best-talk-item {
                 display: flex;
+                flex-shrink: 0;
                 padding: 8px 8px 4px 0;
                 width: 50%;
                 .talk-num {
@@ -237,3 +237,7 @@
     background-color: #00D4ff;
 }
 
+// 댓글 개수 강조 글자 색상
+.txt-emphasize {
+    color: $color-text12;
+}

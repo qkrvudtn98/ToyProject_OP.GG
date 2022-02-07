@@ -1,0 +1,34 @@
+// 화면 하단 요소 영역 
+.footer-area {
+    @include common-inner;
+    position: relative;
+    padding: 40px 0;
+    color: #fff;
+
+    .footer-menu-area {
+        display: flex;
+        margin-bottom: 10px;
+        line-height: 15px;
+        font-size: 12px;
+        .menu-item {
+            margin-right: 20px;
+        }
+    }
+
+    .footer-copyright-area {
+        margin-top: 10px;
+        line-height: 1.5;
+        font-size: 11px;
+        width: 1000px;
+    }
+
+    .footer-sns-area {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        right: 0;
+        .sns-item {
+            padding: 0 4px;
+        }
+    }
+}

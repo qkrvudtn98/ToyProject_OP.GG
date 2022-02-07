@@ -6,5 +6,24 @@
     }
 }
 
+// 화면 하단의 채팅 상담 버튼 영역
+.chatting-area {
+    position: fixed;
+    right: 40px;    
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: $opgg-color-bg5;
+    border-radius: 50%;
+    .btn-chatting {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+    
+
 
 

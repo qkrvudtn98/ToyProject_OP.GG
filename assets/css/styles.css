@@ -404,6 +404,8 @@ textarea::-webkit-outer-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 8px 8px 4px 0;
   width: 50%;
 }
@@ -474,6 +476,52 @@ textarea::-webkit-outer-spin-button {
   background-color: #00D4ff;
 }
 
+.txt-emphasize {
+  color: #0475b8;
+}
+
+.footer-area {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+  position: relative;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footer-area .footer-menu-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  line-height: 15px;
+  font-size: 12px;
+}
+
+.footer-area .footer-menu-area .menu-item {
+  margin-right: 20px;
+}
+
+.footer-area .footer-copyright-area {
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 11px;
+  width: 1000px;
+}
+
+.footer-area .footer-sns-area {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  right: 0;
+}
+
+.footer-area .footer-sns-area .sns-item {
+  padding: 0 4px;
+}
+
 .header-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -485,6 +533,7 @@ textarea::-webkit-outer-spin-button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 40px;
+  min-width: 1080px;
   background-color: #232f46;
 }
 
@@ -504,6 +553,7 @@ textarea::-webkit-outer-spin-button {
   display: flex;
   margin-left: 98px;
   margin-right: 50px;
+  z-index: 1000;
 }
 
 .header-area .game-group .game-item {
@@ -532,9 +582,10 @@ textarea::-webkit-outer-spin-button {
   font-size: 12px;
   margin-left: 8px;
   vertical-align: middle;
+  overflow: hidden;
 }
 
-.header-area .game-group .game-item .game-title.qwer::before, .header-area .game-group .game-item .game-title.duo::before {
+.header-area .game-group .game-item .game-title.new::before {
   content: 'N';
   margin-right: 4px;
   padding: 2px 4px;
@@ -548,7 +599,7 @@ textarea::-webkit-outer-spin-button {
   font-weight: 700;
 }
 
-.header-area .game-group .game-item .game-title.valolant::before {
+.header-area .game-group .game-item .game-title.beta::before {
   content: 'Beta';
   margin-right: 4px;
   padding: 3px 6px;
@@ -560,6 +611,43 @@ textarea::-webkit-outer-spin-button {
   border-radius: 9px;
   font-size: 11px;
   font-weight: 700;
+}
+
+.header-area .select-language-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  top: 0;
+  right: 0;
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  color: #c3cbd1;
+}
+
+.header-area .select-language-area .ico-earth {
+  margin: auto 4px;
+}
+
+.header-area .select-language-area .language-item {
+  margin: 0 8px;
+}
+
+.header-area .select-language-area .language-item .ico-triangle-down {
+  padding: 1px;
+  margin: auto 4px;
+}
+
+.header-area .select-language-area .login {
+  display: inline-block;
+  margin: 4px 0;
+  padding: 0 16px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  border-radius: 5px;
+  background-color: #5383e8;
 }
 
 .header-area .ico-opgg {
@@ -618,5 +706,23 @@ textarea::-webkit-outer-spin-button {
 
 .container.main {
   background-color: #5383e8;
+}
+
+.chatting-area {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #1d2e51;
+  border-radius: 50%;
+}
+
+.chatting-area .btn-chatting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */

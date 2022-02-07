@@ -1,0 +1,239 @@
+.body-area {
+    @include common-inner;
+    
+    // 화면 상단의 그림 로고 영역 스타일링 
+    .main-logo {
+        padding: 32px 0 24px;
+    }
+
+    // 검색창 영역 스타일링 
+    .search-area {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 624px;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+
+        .search-name {
+            display: block;
+            padding: 15px 280px 18px 17px;
+            line-height: 17px;
+            font-size: 14px;
+            outline: none; //입력칸 클릭시 나오는 테두리를 제거해주는 역할을 함
+        }
+
+        .search-etc {
+            padding-right: 17px;
+        }
+    }
+
+    //입력창 밑의 숨김 영역 ( 최근 검색 + 즐겨찾기 )
+    .tab-area {
+        margin: 0 auto;
+        width: 624px;
+        border-radius: 0 0 2px 2px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+        // 최근검색 + 즐겨찾기  
+        .tab-header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            line-height: 40px;
+            font-size: 14px;
+            text-align: center;
+            background-color: $opgg-color-bg4;
+            
+            .tab-header-recent {
+                top: 0;
+                left: 0;
+                width: 50%;
+                &.is-active {
+                    background-color: #fff;
+                }
+            }
+
+            .tab-header-favorite {
+                top: 0;
+                right: 0;
+                width: 50%;
+                &.is-active {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        //검색한 소환사 영역 (최근 검색 영역 is-active일 때 활성화 되도록 만들어주어야 함)
+        .tab-group1 {
+            display: none;
+            &.is-active {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: space-around;
+                justify-content: space-between;
+                padding: 5px 20px 20px 0;
+                .tab-item {
+                    position: relative;
+                    flex-direction: column;
+                    margin-top: 15px;
+                    padding-left: 20px;
+                    line-height: 15px;
+                    font-size: 12px;
+                    width: 200px;
+                    color: $color-text8;
+
+                    .user-name {
+                        display: inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 140px;
+                        white-space: nowrap;
+                    }
+                    .ico-delete {
+                        position: absolute;
+                        right: 0;
+                    };
+
+                    .ico-star {
+                        position: absolute;
+                        right: 24px;
+                    }
+                }
+            }
+        }
+
+        //즐겨찾기한 소환사 영역 (즐겨찾기 영역 is-active일 때 활성화 될 수 있도록 만들어주어야 함)
+        .tab-group2 {
+            display: none;
+            &.is-active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .tab-favorite-info {
+                    display: flex;
+                    padding: 20px;
+                    line-height: 15px;
+                    font-size: 12px;
+                    color: $color-text8;
+                    .txt {
+                        padding: 0 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 광고 영역 
+    .advertisement-area {
+        position: relative;
+        margin-top: 60px;
+        text-align: center;
+        .ico-adv {
+            margin: 0 auto;
+        }
+    }
+
+    // 인기글 영역 (수정 필요함)
+    .talk-best-area {
+        margin-top: 30px;
+        min-height: 396px;
+        border: 1px solid $opgg-color-border1;
+        background-color: #fff;
+
+        // 인기글 상단 제목 영역
+        .talk-best-title {
+            display: block;
+            padding: 17px 0 16px 20px;
+            line-height: 17px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        // 인기글 영역 : 화면 축소해도 침범 받지 않도록 만들어주어야함
+        .best-talk-group {
+            display: flex;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: space-between;
+            .best-talk-item {
+                display: flex;
+                padding: 8px 8px 4px 0;
+                width: 50%;
+                .talk-num {
+                    margin: auto 0;
+                    width: 55px;
+                    color: $color-text9;
+                    text-align: center;
+                }
+                .talk-img {
+                    margin: auto 0;
+                }
+                .talk-subject {
+                    flex-shrink: 0;
+                    margin: auto 0;
+                    padding-left: 8px;
+                    max-width: 300px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    .user-info{
+                        margin-top: 6px;
+                        color: $color-text10;
+                        line-height: 15px;
+                        font-size: 12px;
+                        .txt-username {
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                margin: 0 6px;
+                                height: 3px;
+                                border-left: 3px solid #d8d8d8;
+                                border-radius: 50%;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 상단 로고 영역 이미지 스타일링 
+.main-logo-img {
+    display: block;
+    margin: 0 auto;
+    max-height: 200px;
+}
+
+// 검색창 영역 버튼 스타일링 (btn-country1, btn-country2, btn-find-user)
+.btn-country1 {
+    padding: 2px 6px 2px 8px;
+    color: #fff;
+    background-color: $opgg-color-bg3;
+    font-size: 11px;
+}
+
+.btn-country2 {
+    #triangle-down {
+        margin: 0 6px;
+        padding-top: 2px;
+    }
+}
+
+.btn-find-user {
+    margin-left: 8px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #00D4ff;
+}
+

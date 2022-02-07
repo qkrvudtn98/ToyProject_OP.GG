@@ -1,0 +1,11 @@
+.scroll-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; //모바일에서 많이 사용함 (터치로 스크롤링이 가능할 때 가속도가 붙은 스크롤링이 가능해짐)
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

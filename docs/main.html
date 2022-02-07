@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>롤 전적 검색 OP.GG</title>
+</head>
+<body>
+    <!-- 공통 영역 스타일 : common에 저장-->
+    <div class="container">
+        <!-- 상단 배너 영역 -->
+        <header class="header-area">
+            <a href="./main.html" class="opgg-logo">
+                <img src="../assets/images/ico-opgg.svg" alt="" class="opgg-logo">
+            </a>
+            <ul class="game-group">
+                <li class="game-item current">
+                    <img src="../assets/images/ico-lol.svg" alt="" class="game-img">
+                    <span class="game-title">리그오브레전드</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-duo.svg" alt="" class="game-img">
+                    <span class="game-title duo">Duo</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-qwer.svg" alt="" class="game-img">
+                    <span class="game-title qwer">qwer (이스포츠 전략)</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-valolant.svg" alt="" class="game-img">
+                    <span class="game-title valolant">발로란트</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-battleground.svg" alt="" class="game-img">
+                    <span class="game-title">배틀그라운드</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-overwatch.svg" alt="" class="game-img">
+                    <span class="game-title">오버워치</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-eternalreturn.svg" alt="" class="game-img">
+                    <span class="game-title">이터널 리턴</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-talkpgg.svg" alt="" class="game-img">
+                    <span class="game-title">톡피지지</span>
+                </li>
+                <li class="game-item">
+                    <img src="../assets/images/ico-desktop.svg" alt="" class="game-img">
+                    <span class="game-title">데스크톱</span>
+                </li>
+            </ul> 
+            <!-- language choice -->
+            <div>
+                언어 선택 
+            </div>
+        </header>
+        <!-- //상단 배너 영역 -->
+
+        <!-- 메뉴 영역 -->
+        <div class="menu-area">
+            <ul class="menu-group">
+                <li class="menu-item is-active">
+                    <a href="#" class="btn-menu">홈</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">챔피언분석</a>
+                </li>
+                <li class="menu-item knife-wind">
+                    <a href="#" class="btn-menu">칼바람</a>
+                </li>
+                <li class="menu-item urf">
+                    <a href="#" class="btn-menu">우르프</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">통계</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">랭킹</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">프로관전</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">멀티서치</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">OP셜</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="btn-menu">커뮤니티</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //메뉴 영역 -->
+
+        <!-- 공통 영역 -->
+        <div class="common-inner">
+            <div class="body-area">
+                <!-- 메인 로고 영역-->
+                <div class="main-logo">
+                    <img src="../assets/images/20220130185222.3839bb04ff6c4f5a89525d331be2f1f5.png" alt="" class="main-logo-img">
+                </div>
+                <!-- //메인 로고 영역 -->
+
+                <!-- 검색창 영역 -->
+                <form class="search-area">
+                    <input type="text" class="search-name" placeholder="소환사명, 소환사명, ...">
+                    <div class="search-etc">    
+                        <button class="btn-country1">
+                            <span class="txt">KR</span>
+                        </button>
+                        <button class="btn-country2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#788185" height="10" id="triangle-down" viewBox="0 0 32 32" width="10">
+                                <path d="M4 8 H28 L16 26 z"/>
+                            </svg>
+                        </button>
+                        <button class="btn-find-user">
+                            <a href="#">.GG</a>
+                        </button>
+                    </div>
+                </form>
+                <!-- //검색창 영역 -->
+
+                <!-- 탭 누르면 추가되는 영역 -->
+                <div class="tab-area">
+                    <!-- 상단 버튼 (최근검색 + 즐겨찾기) -->
+                    <ul class="tab-header">
+                        <li class="tab-header-recent">
+                            <a href="#">최근검색</a>
+                        </li>
+                        <li class="tab-header-favorite is-active">
+                            <a href="#">즐겨찾기</a>
+                        </li>
+                    </ul>
+
+                    <!-- 최근 검색 밑의 영역 -->
+                    <div class="tab-group1">
+                        <div class="tab-item">
+                            <a href="#" class="user-name">좋아죽는중년세혁</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                        <div class="tab-item">
+                            <a href="#" class="user-name">최선을다해이기자</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                        <div class="tab-item">
+                            <a href="#" class="user-name">앨리멘틀히어로</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                        <div class="tab-item">
+                            <a href="#" class="user-name">W6yN0t</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                        <div class="tab-item">
+                            <a href="#" class="user-name">노레쓰비</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                        <div class="tab-item">
+                            <a href="#" class="user-name">소환사님이게임을종료하였습니다</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                        <div class="tab-item">
+                            <a href="#" class="user-name">jwoogiee</a>
+                            <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
+                            <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
+                        </div>
+                    </div>
+                    <!-- //최근 검색 밑의 영역 -->
+
+                    <!-- 즐겨 찾기 밑의 영역 -->
+                    <div class="tab-group2 is-active">
+                        <div class="tab-favorite-info">
+                            <img src="../assets/images/icon-history-info.png" alt="">
+                            <span class="txt">관심있는 소환사에</span>
+                            <img src="../assets/images/icon-favorite-off.png" alt="">
+                            <span class="txt">즐겨찾기를 하여 편리하게 정보를 받아보세요.</span>
+                        </div>
+                    </div>
+                    <!-- //즐겨 찾기 밑의 영역 -->
+                </div>
+                <!-- //탭 누르면 추가되는 영역 -->
+
+                <!-- 광고 영역 -->
+                <div class="advertisement-area">
+                    <img src="https://via.placeholder.com/950x250/ccc" alt="" class="ico-adv">
+                </div>
+                <!-- //광고 영역 -->
+
+                <!-- 인기글 영역 -->
+                <div class="talk-best-area">
+                    <p class="talk-best-title">OP.GG Talk 인기글</p>
+                    <ul class="best-talk-group">
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="best-talk-item">
+                            <div class="talk-num">1</div>
+                            <div class="talk-img"><img src="../assets/images/다운로드.jpeg" alt="" style="height: 70px; width: 100px;"></div>
+                            <div class="talk-subject">
+                                <span class="txt-subject">암흑의 별 까를로스</span>
+                                <div class="user-info">    
+                                    <span class="txt-time">1시간전</span>
+                                    <span class="txt-username">까를로스주니어3세</span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- 인기글 영역 --> //화면 축소시켜도 영역 크기 변화 없게 만들어주어야 함
+                
+            </div>
+        </div>
+        <!-- //공통 영역 -->
+    </div>
+</body>
+</html>

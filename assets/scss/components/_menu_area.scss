@@ -1,0 +1,30 @@
+.menu-area {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 48px;
+    border-bottom: 1px solid #4171d6;
+    .menu-group {
+        position: relative;
+        display: flex;
+        flex-shrink: 0;
+        margin: 0 100px;
+        .menu-item {
+            margin-left: 24px;
+            padding-top: 13px;
+            padding-bottom: 11.4px;
+            color: $color-text5;
+            &.knife-wind,
+            &.urf {
+                color: $color-text4;
+            }
+
+            &.is-active {
+                color: #fff;
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+}
+
+// btn-menu 속성값 안넣어줌 

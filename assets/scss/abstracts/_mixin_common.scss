@@ -1,0 +1,12 @@
+// mixin 요소들 정리하는 공간
+@mixin common-inner {
+    display: block;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

@@ -1,0 +1,91 @@
+.header-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background-color: $opgg-color-bg2;
+
+    .opgg-logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px 16.5px; 
+        height: 40px;
+        width: 98px;
+        background-color: $opgg-color-bg1;
+    }
+    // 좀 더 효율적인 방법 찾아보기 (영역자체를 깔끔하게 잡아주는 방법)
+
+    .game-group {
+        display: flex;
+        margin-left: 98px;
+        margin-right: 50px;
+        .game-item {
+            display: flex;
+            margin: 4px;
+            padding: 0 8px;
+            height: 32px;
+            line-height: 32px;
+            color: $color-text3;
+            letter-spacing: -0.4px;
+            white-space: nowrap;
+            &.current {
+                margin: 0;
+                padding: 0 12px 0 4px;
+                height: 40px;
+                line-height: 40px;
+                background-color: $opgg-color-bg1;
+                color: #fff;
+            }
+
+            .game-title {
+                font-size: 12px;
+                margin-left: 8px;
+                vertical-align: middle;
+                &.qwer,
+                &.duo {
+                    &::before {
+                        content: 'N';
+                        margin-right: 4px;
+                        padding: 2px 4px;
+                        width: 16px;
+                        height: 17px;
+                        line-height: 17px;
+                        color: $color-text2;
+                        background-color: $badge-color1;
+                        border-radius: 50%;
+                        font-size: 11px;
+                        font-weight: 700;
+                    }
+                }
+
+                &.valolant {
+                    &::before {
+                        content: 'Beta';
+                        margin-right: 4px;
+                        padding: 3px 6px;
+                        width: 16px;
+                        height: 17px;
+                        line-height: 17px;
+                        color: $color-text2;
+                        background-color: $badge-color1;
+                        border-radius: 9px;
+                        font-size: 11px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .ico-opgg {
+        height: 16px;
+        width: 65px;
+    }
+
+    .game-img {
+        margin: auto 0;
+        height: 24px;
+        width: 24px;
+    }
+}

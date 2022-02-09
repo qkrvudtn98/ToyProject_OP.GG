@@ -1,0 +1,30 @@
+.champion-body-area {
+    @include common-inner;
+    
+    // 광고 영역 
+    .advertisement-area {
+        position: relative;
+        margin-top: 60px;
+        text-align: center;
+        .ico-adv {
+            margin: 0 auto;
+        }
+    }
+
+    // 챔피언 모음 위 메시지 영역
+    .champion-index-message {
+        margin: 10px 0;
+    }
+
+    // 챔피언 영역
+    .champion-area {
+        display: flex;
+
+        .champion-info-area {
+            width: 600px;
+        }
+        .chapion-trend-area {
+            width: 480px;
+        }
+    }
+}

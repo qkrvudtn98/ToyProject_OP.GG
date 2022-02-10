@@ -13,18 +13,186 @@
 
     // 챔피언 모음 위 메시지 영역
     .champion-index-message {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin: 10px 0;
+        line-height: 18px;
+        font-size: 12px;
+        color: $color-text6;
+        .version-info {
+            display: flex;
+        }
     }
 
     // 챔피언 영역
     .champion-area {
         display: flex;
-
         .champion-info-area {
+            display: flex;
+            flex-direction: column;
             width: 600px;
+            .champion-menu-area {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 52px;
+                background-color: #fff;
+                border-bottom: 1px solid $opgg-color-border1;
+                .position-area {
+                    margin: auto 20px;
+                    .position-group {
+                        display: flex;
+                        .position-item {
+                            display: block;
+                            flex-shrink: 0;
+                            padding: 15px 7px;
+                            line-height: 17px;
+                            font-size: 14px;
+                            color: $color-text16;
+                            border-bottom: 2px solid transparent;
+                            &.is-active {
+                                font-weight: 700;
+                                color: $color-text17;
+                                border-bottom: 2px solid $color-text17;
+                            }
+                            &.lotation {
+                                color: $color-text17;
+                            }
+                        }
+                    }                
+                }
+                
+                .search-area {
+                    padding: 9px 0 10px 10px;
+                    margin: auto 20px;
+                    width: 193px;
+                    height: 36px;
+                    border: none;
+                    line-height: 15px;
+                    font-size: 12px;
+                    color: $color-text18;
+                    background-color: $opgg-color-bg7;
+                    &::placeholder {
+                        color: $color-text16;
+                    }
+                }
+            }
+            .champion-content-area {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10px 8px;
+                .champion-item {
+                    margin-top: 20px;
+                    margin-left: 12px;
+                }
+            }
         }
-        .chapion-trend-area {
-            width: 480px;
+
+        .champion-trend-area {
+            .trend-menu-area {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 480px;
+                height: 52px;
+                background-color: #fff;
+                border-left: 1px solid $opgg-color-border1;   
+                border-bottom: 1px solid $opgg-color-border1;
+                .champion-rank {
+                    margin-left: 20px;
+                    font-weight: 700;
+                }
+    
+                .trend-menu {
+                    display: flex;
+                    .trend-item {
+                        display: inline-block;
+                        padding: 16px 5px 14px;
+                        color: $color-text16;
+                        &:not(:first-child)::before{
+                            content: '';
+                            margin-right: 8px;
+                            width: 0.1px;
+                            height: 12px;
+                            border: 1px solid $opgg-color-border2;
+                        }
+
+                        &.is-active {
+                            font-weight: 700;
+                            color: $color-text17;
+                            border-bottom: 2px solid $color-text17;
+                        }
+                        
+                    }
+                }
+            }
+            .trend-content-area {
+                padding: 20px 20px 40px;
+                .select-position {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 36px;
+                    border: 1px solid $opgg-color-border1;
+                    .position-item {
+                        flex: 1;
+                        padding: 12px auto;
+                        text-align: center;
+                        line-height: 36px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        letter-spacing: -0.9px;
+                        color: $color-text19;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &:not(:last-child) {
+                            border-right: 1px solid $opgg-color-border1;
+                        }
+                        &.is-active {
+                            color: $color-text7;
+                            font-weight: 700;
+                            background-color: #fff;
+                        }
+                    }
+                }
+
+                //  여기까지 스타일링 완료 
+                .trend-group {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .trend-item {
+
+                        &:first-child {
+                            height: 47px;
+                            line-height: 15px;
+                            text-align: center;
+                            font-weight: 500;
+                            border: none;
+                            color: $color-text16;
+                        }
+                    }
+
+                    .trend-item {
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                }
+            }
         }
     }
+}
+
+.ico-tip {
+    margin-right: 8px;
+}
+
+.ico-cmp {
+    margin-right: 2px;
+}
+
+.version-txt {
+    color: $color-text1;
 }

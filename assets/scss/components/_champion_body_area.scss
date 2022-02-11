@@ -81,10 +81,24 @@
             .champion-content-area {
                 display: flex;
                 flex-wrap: wrap;
-                margin: 10px 8px;
+                padding: 10px 8px;
+                background-color: #f9f9f9;
                 .champion-item {
+                    display: flex;
+                    flex-direction: column;
                     margin-top: 20px;
                     margin-left: 12px;
+                    .champion-name {
+                        margin: 8px 0 20px;
+                        width: 80px;
+                        height: 16px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-size: 12px;
+                        color: $color-text20;
+
+                    }
                 }
             }
         }
@@ -129,6 +143,8 @@
             }
             .trend-content-area {
                 padding: 20px 20px 40px;
+                border-left: 2px solid $opgg-color-bg6;
+                background-color: #f9f9f9;
                 .select-position {
                     display: flex;
                     align-items: center;
@@ -164,20 +180,44 @@
                     flex-direction: column;
                     justify-content: center;
                     .trend-item {
-
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        width: 440px;
+                        height: 60px;
+                        line-height: 16px;
+                        font-size: 12px;
+                        text-align: center;
+                        border-left: 1px solid $opgg-color-border3;
+                        border-bottom: 1px solid $opgg-color-border3;
+                        border-right: 1px solid $opgg-color-border3;
+                        color: $color-text16;
                         &:first-child {
-                            height: 47px;
-                            line-height: 15px;
+                            height: 56px;
+                            line-height: 30px;
+                            font-size: 12px;
                             text-align: center;
                             font-weight: 500;
                             border: none;
                             color: $color-text16;
+                            border-bottom: 1px solid $opgg-color-border3;
+                            .index {
+                                width: 80px;
+                            }
+                            .index-champion {
+                                width: 170px;
+                            }
+                            .index-winrate,
+                            .index-pickrate {
+                                width: 65px;
+                            }
+                            .index-tier {
+                                width: 60px;
+                            }
                         }
-                    }
-
-                    .trend-item {
-                        display: flex;
-                        justify-content: space-around;
+                        &:not(:first-child) {
+                            background-color: #fff;
+                        }
                     }
                 }
             }
@@ -195,4 +235,42 @@
 
 .version-txt {
     color: $color-text1;
+}
+
+// 챔피언 티어 요소 속성 
+.ranking {
+    width: 40px;
+    font-size: 16px;
+    font-style: italic;
+}
+.variation {
+    width: 40px;
+    .rank-change {
+        padding-right: 4px;
+    }
+}
+
+.name {
+    position: relative;
+    width: 170px;
+    text-align: left;
+    .txt {
+        position: absolute;
+        padding-left: 8px;
+        color: $color-text20;
+    }
+    .position-txt {
+        padding-top: 2px;
+        padding-left: 8px;
+        font-size: 12px;
+    }
+}
+
+.winrate,
+.pickrate {
+    width: 65px;
+}
+
+.tier {
+    width: 60px;
 }

@@ -328,12 +328,31 @@ textarea::-webkit-outer-spin-button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 10px 8px;
+  padding: 10px 8px;
+  background-color: #f9f9f9;
 }
 
 .champion-body-area .champion-area .champion-info-area .champion-content-area .champion-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 20px;
   margin-left: 12px;
+}
+
+.champion-body-area .champion-area .champion-info-area .champion-content-area .champion-item .champion-name {
+  margin: 8px 0 20px;
+  width: 80px;
+  height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #4a4a4a;
 }
 
 .champion-body-area .champion-area .champion-trend-area .trend-menu-area {
@@ -386,6 +405,8 @@ textarea::-webkit-outer-spin-button {
 
 .champion-body-area .champion-area .champion-trend-area .trend-content-area {
   padding: 20px 20px 40px;
+  border-left: 2px solid #eaeaea;
+  background-color: #f9f9f9;
 }
 
 .champion-body-area .champion-area .champion-trend-area .trend-content-area .select-position {
@@ -441,21 +462,56 @@ textarea::-webkit-outer-spin-button {
           justify-content: center;
 }
 
-.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child {
-  height: 47px;
-  line-height: 15px;
-  text-align: center;
-  font-weight: 500;
-  border: none;
-  color: #777777;
-}
-
 .champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 440px;
+  height: 60px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+  border-left: 1px solid #ebeef1;
+  border-bottom: 1px solid #ebeef1;
+  border-right: 1px solid #ebeef1;
+  color: #777777;
+}
+
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child {
+  height: 56px;
+  line-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+  border: none;
+  color: #777777;
+  border-bottom: 1px solid #ebeef1;
+}
+
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child .index {
+  width: 80px;
+}
+
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child .index-champion {
+  width: 170px;
+}
+
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child .index-winrate,
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child .index-pickrate {
+  width: 65px;
+}
+
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:first-child .index-tier {
+  width: 60px;
+}
+
+.champion-body-area .champion-area .champion-trend-area .trend-content-area .trend-group .trend-item:not(:first-child) {
+  background-color: #fff;
 }
 
 .ico-tip {
@@ -468,6 +524,47 @@ textarea::-webkit-outer-spin-button {
 
 .version-txt {
   color: #000;
+}
+
+.ranking {
+  width: 40px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.variation {
+  width: 40px;
+}
+
+.variation .rank-change {
+  padding-right: 4px;
+}
+
+.name {
+  position: relative;
+  width: 170px;
+  text-align: left;
+}
+
+.name .txt {
+  position: absolute;
+  padding-left: 8px;
+  color: #4a4a4a;
+}
+
+.name .position-txt {
+  padding-top: 2px;
+  padding-left: 8px;
+  font-size: 12px;
+}
+
+.winrate,
+.pickrate {
+  width: 65px;
+}
+
+.tier {
+  width: 60px;
 }
 
 .footer-area {

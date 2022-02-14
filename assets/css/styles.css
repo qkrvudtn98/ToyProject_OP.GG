@@ -1078,6 +1078,32 @@ textarea::-webkit-outer-spin-button {
   border-bottom: 2px solid #fff;
 }
 
+.user-body-area {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.user-body-area .user-info-area .user-tier-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-body-area .user-info-area .user-tier-group .tier-item {
+  padding: 3px 4px 2px 4px;
+  margin-right: 8px;
+  border: 1px solid #ced3d3;
+  border-radius: 3px;
+  background-color: #e0e3e3;
+  color: #4a4a4a;
+}
+
+.icon-user {
+  width: 100px;
+  height: 100px;
+}
+
 .container {
   min-height: 100vh;
   background-color: #5383e8;
@@ -1087,7 +1113,7 @@ textarea::-webkit-outer-spin-button {
   background-color: #5383e8;
 }
 
-.container.champion {
+.container.user, .container.champion {
   background-color: #eaeaea;
 }
 

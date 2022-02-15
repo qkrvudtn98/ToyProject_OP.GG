@@ -1084,10 +1084,20 @@ textarea::-webkit-outer-spin-button {
   max-width: 1080px;
 }
 
+.user-body-area .user-info-area {
+  margin: 0 auto;
+  padding: 20px 0px 0px;
+  width: 1000px;
+}
+
 .user-body-area .user-info-area .user-tier-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: -5px;
+  margin-left: 5px;
+  padding-left: 30px;
+  padding-bottom: 15px;
 }
 
 .user-body-area .user-info-area .user-tier-group .tier-item {
@@ -1096,12 +1106,218 @@ textarea::-webkit-outer-spin-button {
   border: 1px solid #ced3d3;
   border-radius: 3px;
   background-color: #e0e3e3;
-  color: #4a4a4a;
+  color: #657070;
 }
 
-.icon-user {
+.user-body-area .user-info-area .user-profile-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-body-area .user-info-area .user-profile-area .face-group {
+  position: relative;
+}
+
+.user-body-area .user-info-area .user-profile-area .face-group .icon-user {
+  margin-left: 30px;
   width: 100px;
   height: 100px;
+}
+
+.user-body-area .user-info-area .user-profile-area .face-group .level {
+  position: absolute;
+  left: 50%;
+  margin-top: -26px;
+  margin-left: -8px;
+  padding-top: 5px;
+  width: 44px;
+  height: 24px;
+  line-height: 17px;
+  font-size: 14px;
+  text-align: center;
+  background: url(/assets/images/bg-levelbox.png);
+  color: #eabd56;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .user-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 25px 0px 28px;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .user-name .txt {
+  margin-right: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #242929;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .user-name .favorite {
+  margin-left: 4px;
+  padding: 3px 5px;
+  border: 1px solid #c6cbcb;
+  border-radius: 3px;
+  font-size: 10px;
+  color: #777777;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .user-name .favorite::before {
+  content: url(/assets/images/icon-favoriteStar-off.png);
+  vertical-align: middle;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .user-name .favorite .txt {
+  font-size: 10px;
+  color: #777777;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .user-name .favorite.is-active::before {
+  content: url(/assets/images/icon-favoriteStar-on.png);
+  vertical-align: middle;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .update-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 25px 0px 28px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .update-group .update-log {
+  margin: 0px 6px 0px 0px;
+  padding: 11px 14px 10px;
+  font-size: 14px;
+  border: 1px solid #1a78ae;
+  border-radius: 2px;
+  color: #f2f2f2;
+  background-color: #1f8ecd;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .update-group .update-total {
+  position: relative;
+  padding: 11px 54px 10px 14px;
+  line-height: 17px;
+  font-size: 14px;
+  border: 1px solid #6833d5;
+  border-radius: 2px;
+  background-color: #955dff;
+  color: #f2f2f2;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .update-group .update-total .ico-nopgg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46px;
+  height: 34px;
+}
+
+.user-body-area .user-info-area .user-profile-area .user-profile-group .recent-update {
+  margin: 6px 0 4px 28px;
+  font-size: 10px;
+  color: #99a2a2;
+}
+
+.user-body-area {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.user-body-area .user-menu-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-body-area .user-menu-area .total-menu {
+  display: block;
+  padding: 0 6px;
+  min-width: 70px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c6cbcb #c6cbcb #eaeaea;
+  background-color: #e8eaea;
+  color: #141717;
+  text-align: center;
+}
+
+.user-body-area .user-menu-area .champion-menu {
+  padding: 0 6px;
+  min-width: 70px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  border: 1px solid #c6cbcb;
+  background-color: #f2f2f2;
+  color: #555e5e;
+  text-align: center;
+}
+
+.user-body-area .user-menu-area .ingame-menu {
+  position: relative;
+  margin-left: 15px;
+  padding: 0 20px;
+  min-width: 70px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  border: 1px solid #c6cbcb;
+  background-color: #f2f2f2;
+  color: #1a78ae;
+  text-align: center;
+}
+
+.user-body-area .user-menu-area .ingame-menu .ico-ingame {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
+.user-body-area .advertisement-area {
+  margin-top: 30px;
+}
+
+.user-body-area .user-game-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-body-area .user-game-area .user-statistics-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-body-area .user-game-area .user-log-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container {

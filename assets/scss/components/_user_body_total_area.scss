@@ -1,0 +1,71 @@
+.user-body-area {
+    @include common-inner;
+
+    // 메뉴 영역 아래에 선 긋는게 잘 안그어짐 
+    .user-menu-area {
+        display: flex;
+
+        .total-menu {
+            display: block;
+            padding: 0 6px;
+            min-width: 70px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 13px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $opgg-color-border5 $opgg-color-border5 $opgg-color-bg6;
+            background-color: $opgg-color-bg11;
+            color: rgb(20, 23, 23);
+            text-align: center;
+        }
+
+        .champion-menu {
+            padding: 0 6px;
+            min-width: 70px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 13px;
+            border: 1px solid $opgg-color-border5;
+            background-color: $opgg-color-bg12;
+            color: $color-text27;
+            text-align: center;
+        }
+
+        .ingame-menu {
+            position: relative;
+            margin-left: 15px;
+            padding: 0 20px;
+            min-width: 70px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 13px;
+            border: 1px solid $opgg-color-border5;
+            background-color: $opgg-color-bg12;
+            color: $opgg-color-border6;
+            text-align: center;
+            .ico-ingame {
+                transform: translateY(25%);
+            }
+        }
+    }
+
+    .advertisement-area {
+        margin-top: 30px;
+    }
+
+    .user-game-area {
+        display: flex;
+
+        .user-statistics-area {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-log-area {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}

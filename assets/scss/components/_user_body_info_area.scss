@@ -1,0 +1,138 @@
+.user-body-area {
+    @include common-inner;
+    .user-info-area {   
+        margin: 0 auto;
+        padding: 20px 0px 0px;
+        width: 1000px;
+
+        .user-tier-group {
+            display: flex;
+            margin-top: -5px;
+            margin-left: 5px;
+            padding-left: 30px;
+            padding-bottom: 15px;
+
+            .tier-item {
+                padding: 3px 4px 2px 4px;
+                margin-right: 8px;
+                border: 1px solid $opgg-color-border4;
+                border-radius: 3px;
+                background-color: $opgg-color-bg8;
+                color: $color-text21;
+            }
+        }
+
+
+        .user-profile-area {
+            display: flex;
+
+            .face-group {
+                position: relative;
+                .icon-user {
+                    margin-left: 30px;
+                    width: 100px;
+                    height: 100px;
+                }
+                .level {
+                    position: absolute;
+                    left: 50%;
+                    margin-top: -26px;
+                    margin-left: -8px;
+                    padding-top: 5px;
+                    width: 44px;
+                    height: 24px;
+                    line-height: 17px;
+                    font-size: 14px;
+                    text-align: center;
+                    background: url(/assets/images/bg-levelbox.png);
+                    color: $color-text22;
+                }
+            }
+
+            .user-profile-group {
+                display: flex;
+                flex-direction: column;
+                .user-name {
+                    display: flex;
+                    margin: 0px 25px 0px 28px;
+
+                    .txt {
+                        margin-right: 4px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: $color-text23;
+                    }
+
+                    .favorite {
+                        margin-left: 4px;
+                        padding: 3px 5px;
+                        border: 1px solid $opgg-color-border5;
+                        border-radius: 3px;
+                        font-size: 10px;
+                        color: $color-text16;
+                        &::before {
+                            content: url(/assets/images/icon-favoriteStar-off.png);
+                            vertical-align: middle;
+                        }
+
+                        .txt {
+                            font-size: 10px;
+                            color: $color-text16;
+                        }
+
+                        &.is-active {
+                            &::before {
+                                content: url(/assets/images/icon-favoriteStar-on.png);
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+
+                .update-group {
+                    display: flex;
+                    margin: 30px 25px 0px 28px;
+                    height: 40px;
+                    line-height: 40px;
+
+                    .update-log{
+                        margin: 0px 6px 0px 0px;
+                        padding: 11px 14px 10px;
+                        font-size: 14px;
+                        border: 1px solid $opgg-color-border6;
+                        border-radius: 2px;
+                        color: $color-text24;
+                        background-color: $opgg-color-bg9;
+                    }
+
+                    .update-total {
+                        position: relative;
+                        padding: 11px 54px 10px 14px;
+                        line-height: 17px;
+                        font-size: 14px;
+                        border: 1px solid $opgg-color-border7;
+                        border-radius: 2px;
+                        background-color: $opgg-color-bg10;
+                        color: $color-text24;
+                        .ico-nopgg {
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            width: 46px;
+                            height: 34px;
+                        }
+                    }
+                }
+
+                .recent-update {
+                    margin: 6px 0 4px 28px;
+                    font-size: 10px;
+                    color: $color-text25;
+                }
+            }
+        }
+
+    }
+}
+
+

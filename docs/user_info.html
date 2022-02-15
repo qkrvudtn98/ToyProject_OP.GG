@@ -17,7 +17,7 @@
             <ul class="game-group">
                 <li class="game-item current">
                     <img src="../assets/images/ico-lol.svg" alt="" class="game-img">
-                    <span class="game-title">리그오브레전드</span>
+                    <div class="game-title">리그오브레전드</span>
                 </li>
                 <li class="game-item">
                     <img src="../assets/images/ico-duo.svg" alt="" class="game-img">
@@ -126,16 +126,40 @@
                         </li>
                     </ul>
                     <div class="user-profile-area">
-                        <img src="../assets/images/icon-user1.jpg" alt="" class="icon-user">
+                        <div class="face-group">
+                            <img src="../assets/images/icon-user1.jpg" alt="" class="icon-user">
+                            <div class="level">
+                                <span>217</span>
+                            </div>
+                        </div>
+                        <div class="user-profile-group">
+                            <div class="user-name">
+                                <span class="txt">좋아죽는중년세혁</span>
+                                <button class="favorite">
+                                    <span class="txt">즐겨찾기</span>
+                                </button>
+                            </div>
+                            <div class="update-group">
+                                <button class="update-log">전적갱신</button>
+                                <a href="#" class="update-total">
+                                    롤 몇 시간 했는지 궁금해?
+                                    <img src="../assets/images/img-nopgg-banner@2x.png" alt="" class="ico-nopgg">
+                                </a>
+                            </div>
+                            <span class="recent-update">최근 업데이트: 11시간 전</span>
+                        </div>
                     </div>
                 </div>
                 <!-- //상단 소환사 정보 영역 -->
 
                 <!-- 상단 소환사 메뉴 영역 -->
                 <div class="user-menu-area">
-                    <div>종합</div>
-                    <div>챔피언</div>
-                    <div>인게임 정보</div>
+                    <div class="total-menu">종합</div>
+                    <div class="champion-menu">챔피언</div>
+                    <div class="ingame-menu">
+                        <img src="../assets/images/icon-ingame-n.png" alt="" class="ico-ingame">
+                        인게임 정보
+                    </div>
                 </div>
                 <!-- //상단 소환사 메뉴 영역 -->
 
@@ -148,11 +172,66 @@
                 <!-- 소환사 통계 + 전적 영역 -->
                 <div class="user-game-area">
                     <!-- 소환사 통계 영역 -->
-                    <div class="user-statistics-area"></div>
+                    <div class="user-statistics-area">
+                        <div class="solo-rank"></div>
+                        <div class="free-rank"></div>
+                        <div class="champion-statistics">
+                            <div class="statistics-menu">
+                                <div>S2022 전체</div>
+                                <div>솔로랭크</div>
+                                <div>자유랭크 5vs5</div>
+                            </div>
+                            <ul class="champion-group">
+                                <li class="champion-item">레오나</li>
+                                <li class="champion-item">노틸러스</li>
+                                <li class="champion-item">모데카이저</li>
+                                <li class="champion-item">브라움</li>
+                                <li class="champion-item">탐켄치</li>
+                                <li class="champion-item">잭스</li>
+                                <li class="champion-item">그웬</li>
+                            </ul>
+                        </div>
+                    </div>
                     <!-- //소환사 통계 영역 -->
 
                     <!-- 소환사 게임 전적 영역 -->
-                    <div class="user-log-area"></div>
+                    <div class="user-log-area">
+                        <div class="log-type-menu">
+                            <div class="type-total">전체</div>
+                            <div class="type-solo">솔로랭크</div>
+                            <div class="type-free">자유랭크</div>
+                            <div class="type-queue">큐 타입</div>
+                            <input type="text" class="champion-search" placeholder="챔피언 검색">
+                        </div>
+                        <div class="recent-log">
+                            <div class="recent-chart"></div>
+                            <div class="recent-champion"></div>
+                            <div class="recent-favorite-position"></div>
+                        </div>
+                        <div class="beta-info"></div>
+                        <ul class="recent-log-group">
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                            <li class="recent-log-item"></li>
+                        </ul>
+                        <button class="more-log">더 보기</button>
+                    </div>
                     <!-- //소환사 게임 전적 영역 -->
                 </div>
                 <!-- //소환사 통계 + 전적 영역 -->

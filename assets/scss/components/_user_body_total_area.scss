@@ -171,19 +171,22 @@
                         border-bottom: 1px solid $opgg-color-border9;
                         .info {
                             padding-left: 8px;
-                            width: 85px;
+                            width: 80px;
                             text-align: left;
                         }
                         .kda {
+                            width: 90px;
                             line-height: 1.2;
                             text-align: center;
                         }
                         .played {
+                            width: 70px;
                             text-align: center;
                         }
                     }
                 }
             }
+
             .recent-winrate {
                 display: flex;
                 flex-direction: column;
@@ -212,11 +215,206 @@
                     }
                 }
             }
+
+            .recent-user {
+                margin-top: 12px;
+                border: 1px solid $opgg-color-border9;
+                border-radius: 2px;
+                box-shadow: 0 1px $opgg-color-border8;
+                background-color: $opgg-color-bg12;
+
+                .subject {
+                    display: block;
+                    padding: 10px 16px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    border-bottom: 1px solid $opgg-color-border9;
+                    color: $color-text27;
+                }
+
+                .recent-user-menu {
+                    display: flex;
+                    justify-content: space-around;
+                    .sort-btn {
+                        padding-top: 11px;
+                        padding-bottom: 10px;    
+                        .txt {
+                            padding-left: 16px;
+                            padding-right: 4px;
+                            font-size: 12px;
+                            text-align: left;
+                            color: $color-text28;
+                        }
+                    }
+                }
+
+                .recent-user-group {
+                    .recent-user-item {
+                        display: flex;
+                        padding-top: 11px;
+                        padding-bottom: 10px;   
+                        font-size: 12px;
+                        &.odd {
+                            background-color: $opgg-color-bg13;
+                        }
+                        .name {
+                            @include ellipsis;
+                            padding-left: 16px;
+                            width: 90px;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: $color-text27;
+                        }
+                        .total {
+                            padding-right: 8px;
+                            width: 50px;
+                            font-size: 11px;
+                            text-align: center;
+                            color: $colot-text29;
+                        }
+                        .win {
+                            padding-left: 4px;
+                            width: 45px;
+                            font-size: 11px;
+                            text-align: center;
+                            color: $colot-text29;
+                        }
+                        .lose {
+                            padding-left: 12px;
+                            width: 45px;
+                            font-size: 11px;
+                            text-align: center;
+                            color: $colot-text29;
+                        }
+                        .percentage {
+                            padding-left: 16px;
+                            width: 70px;
+                            font-size: 11px;
+                            text-align: center;
+                            color: $colot-text29;
+                        }
+                    }
+                }
+
+
+            }
+
+            .advertisement-area {
+                   margin-top: 10px;
+            }
         }
 
         .user-log-area {
             display: flex;
             flex-direction: column;
+            flex-shrink: 0;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 12px;
+            width: 690px;
+
+            .log-type-menu {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: -1px;
+                height: 34px;
+                border: 1px solid $opgg-color-border9;
+                border-bottom: 1px solid $opgg-color-border9;
+                border-radius: 2px;
+                box-shadow: 0 1px $opgg-color-border8;
+                background-color: $opgg-color-bg12;
+
+                .log-type-group {
+                    display: flex;
+                }
+            }
+
+            .recent-log {
+                display: flex;
+                margin-top: -1px;
+                text-align: left;
+                border: 1px solid $opgg-color-border9;
+                box-shadow: rgb(220, 223, 223) 0px 1px;
+                background-color: $opgg-color-bg12;
+                
+                .recent-chart {
+                    width: 280px;
+                    border-right: 1px solid $opgg-color-border9;
+                }
+
+                .recent-champion {
+                    width: 230px;
+                    border-right: 1px solid $opgg-color-border9;
+                    .champion-area {
+                        display: flex;
+                        .ico-champion {
+                            width: 34px;
+                            height: 34px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .recent-favorite-position {
+                    width: 180px;
+                }
+            }
+
+            .beta-info {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 8px 0px 8px 16px;
+                height: 34px;
+                font-size: 12px;
+                background-color: $opgg-color-bg16;
+                color: $opgg-color-bg12;
+                .beta {
+                    margin-left: 8px;
+                    padding: 4px 4px 2px;
+                    font-size: 11px;
+                    border-radius: 2px;
+                    background-color: $badge-color2;
+                    color: #fff;
+                }
+                .view-detail-btn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 34px;
+                    height: 100%;
+                    background-color: #222;
+                }
+            }
+
+            .recent-log-group {
+                .recent-log-item {
+                    margin-bottom: 8px;
+                    width: 689px;
+                    height: 97px;
+
+                    &.win {
+                        border: 1px solid $opgg-color-border11;
+                        background-color: $opgg-color-bg14;
+                    }
+
+                    &.lose {
+                        border: 1px solid $opgg-color-border12;
+                        background-color: $opgg-color-bg15;
+                    }
+                }
+            }
+
+            .more-log-btn {
+                padding: 12px 0;
+                border: 1px solid $opgg-color-border9;
+                border-bottom: 1px solid $opgg-color-border9;
+                border-radius: 2px;
+                background-color: $opgg-color-bg12;
+            }
         }
     }
 

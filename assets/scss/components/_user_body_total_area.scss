@@ -270,28 +270,28 @@
                             width: 50px;
                             font-size: 11px;
                             text-align: center;
-                            color: $colot-text29;
+                            color: $color-text29;
                         }
                         .win {
                             padding-left: 4px;
                             width: 45px;
                             font-size: 11px;
                             text-align: center;
-                            color: $colot-text29;
+                            color: $color-text29;
                         }
                         .lose {
                             padding-left: 12px;
                             width: 45px;
                             font-size: 11px;
                             text-align: center;
-                            color: $colot-text29;
+                            color: $color-text29;
                         }
                         .percentage {
                             padding-left: 16px;
                             width: 70px;
                             font-size: 11px;
                             text-align: center;
-                            color: $colot-text29;
+                            color: $color-text29;
                         }
                     }
                 }
@@ -387,24 +387,6 @@
                     width: 34px;
                     height: 100%;
                     background-color: #222;
-                }
-            }
-
-            .recent-log-group {
-                .recent-log-item {
-                    margin-bottom: 8px;
-                    width: 689px;
-                    height: 97px;
-
-                    &.win {
-                        border: 1px solid $opgg-color-border11;
-                        background-color: $opgg-color-bg14;
-                    }
-
-                    &.lose {
-                        border: 1px solid $opgg-color-border12;
-                        background-color: $opgg-color-bg15;
-                    }
                 }
             }
 

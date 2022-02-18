@@ -1,0 +1,134 @@
+.recent-log-group {
+
+    .recent-log-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        width: 689px;
+        height: 97px;
+        text-align: center;
+
+        &.win {
+            border: 1px solid $opgg-color-border11;
+            background-color: $opgg-color-bg14;
+        }
+
+        &.lose {
+            border: 1px solid $opgg-color-border12;
+            background-color: $opgg-color-bg15;
+        }
+
+        .info {
+            width: 70px;
+            line-height: 16px;
+            font-size: 11px;
+            color: $color-text30;
+
+            .type {
+                font-weight: 700;
+            }
+
+            .bar {
+                display: block;
+                width: 28px;
+                margin: 5px auto;
+                height: 2px; 
+                background-color: $opgg-color-border11;
+            }
+
+            .game-result { 
+                font-weight: 700;
+                color: $opgg-color-border6;
+            }
+        }
+
+        .champion {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            width: 100px;
+            height: 100%;
+
+            .setting {
+                display: flex;
+                .icon {
+                    .ico-champion {
+                        width: 46px;
+                        height: 46px;
+                        border-radius: 50%;
+                    }
+                }
+                
+                .spells {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 4px;
+                    .ico-spell {
+                        display: block;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 3px;
+                        overflow: hidden;
+                    }
+                }
+
+                .runes {
+                    .ico-rune {
+                        display: block;
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
+
+            .name {
+                display: block;
+                width: 100px;
+                text-align: center;
+            }
+
+        }
+
+        .kda {
+            width: 115px;
+
+        }
+
+        .stats {
+            width: 90px;
+        }
+
+        .items {
+            width: 115px;
+
+            .ico-item {
+                width: 22px;
+                height: 22px;
+            }
+
+            .ico-ward {
+                width: 22px;
+                height: 22px;
+            }
+
+            .ico-bluebuild {
+                width: 22px;
+                height: 22px;
+            }
+        }
+        
+        .participants {
+            width: 170px;
+
+            .ico-participant {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .action {
+            width: 47px;
+        }
+    }
+}

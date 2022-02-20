@@ -1939,6 +1939,15 @@ textarea::-webkit-outer-spin-button {
   width: 115px;
 }
 
+.recent-log-group .recent-log-item .kda .multi-kill {
+  display: inline-block;
+  padding: 2px 5px;
+  border: 1px solid #c6443e;
+  border-radius: 15px;
+  background-color: #ef5a52;
+  color: #fff;
+}
+
 .recent-log-group .recent-log-item .stats {
   width: 90px;
 }

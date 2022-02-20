@@ -92,7 +92,23 @@
 
         .kda {
             width: 115px;
+            
+            .game-kda {
 
+            }
+
+            .total-score {
+
+            }
+
+            .multi-kill {
+                display: inline-block;
+                padding: 2px 5px;
+                border: 1px solid $opgg-color-percentage1;
+                border-radius: 15px;
+                background-color: $opgg-color-bg17;
+                color: #fff;
+            }
         }
 
         .stats {

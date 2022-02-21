@@ -12,139 +12,495 @@
         &.win {
             border: 1px solid $opgg-color-border11;
             background-color: $opgg-color-bg14;
+            .info {
+                width: 70px;
+                line-height: 16px;
+                font-size: 11px;
+                white-space: nowrap;
+                color: $color-text30;
+    
+                .type {
+                    font-weight: 700;
+                }
+    
+                .bar {
+                    display: block;
+                    width: 28px;
+                    margin: 5px auto;
+                    height: 2px; 
+                    background-color: $opgg-color-border11;
+                }
+    
+                .game-result { 
+                    font-weight: 700;
+                    color: $opgg-color-border6;
+                }
+            }
+    
+            .champion {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 100px;
+                height: 100%;
+    
+                .setting {
+                    display: flex;
+                    .icon {
+                        .ico-champion {
+                            width: 46px;
+                            height: 46px;
+                            border-radius: 50%;
+                        }
+                    }
+                    
+                    .spells {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 4px;
+                        .ico-spell {
+                            display: block;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 3px;
+                            overflow: hidden;
+                        }
+                    }
+    
+                    .runes {
+                        .ico-rune {
+                            display: block;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+    
+                .name {
+                    display: block;
+                    width: 100px;
+                    text-align: center;
+                }
+    
+            }
+    
+            .kda {
+                width: 115px;
+                
+                .game-kda {
+                    font-size: 15px;
+                    white-space: nowrap;
+                    color: $color-text28;
+                    .kill {
+                        font-weight: 700;
+                        color: $color-text27;
+                    }
+    
+                    .death {
+                        font-weight: 700;
+                        color: $opgg-color-percentage1;
+                    }
+    
+                    .assist {
+                        font-weight: 700;
+                        color: $color-text27;
+                    }
+                }
+    
+                .total-score {
+                    margin-top: 6px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: $color-text27;
+                    span {
+                        color: $color-text31;
+                    }
+                }
+    
+                .multi-kill {
+                    display: inline-block;
+                    margin: 8px 4px 0;
+                    padding: 2px 5px;
+                    border: 1px solid $opgg-color-percentage1;
+                    border-radius: 15px;
+                    font-size: 10px;
+                    background-color: $opgg-color-bg17;
+                    color: #fff;
+                }
+            }
+    
+            .stats {
+                width: 90px;
+                font-size: 11px;
+                text-align: center;
+                line-height: 18px;
+                color: $color-text27;
+                .cs {
+                    margin: 0;
+                    font-size: 11px;
+                }
+                .kill-participation {
+                    color: $opgg-color-percentage1;
+                }
+                .mmr {
+                    b {
+                        color: $color-text31;
+                    }
+                }
+            }
+    
+            .items {
+                width: 115px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        width: 72px;
+                        .ico-item {     
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 3px;
+                            margin-top: 2px;
+                            margin-right: 2px;
+                            overflow: hidden;
+                        }
+                    }
+                    div {
+                        .ward {
+                            margin-top: 2px;
+                            margin-right: 2px;
+                        }
+                        .build {
+                            margin-top: 2px;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+    
+                .control {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 8px;
+                    height: 16px;
+                    line-height: 13px;
+                    font-size: 11px;
+                    .ico-blueward {
+                        margin-right: 4px;
+                    }
+                }
+    
+                .ico-ward {
+                    border-radius: 3px;
+                    width: 22px;
+                    height: 22px;
+                }
+    
+                .ico-bluebuild {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            
+            .participants {
+                position: relative;
+                display: flex;
+                flex-shrink: 0;
+                width: 170px;
+                ul {
+                    float: left;
+                    width: 50%;
+                    li {
+                        @include ellipsis;
+                        width: 80px;
+                        height: 18px;
+                        margin-left: 3px;
+                        text-align: left;
+                        white-space: nowrap;
+                    }
+                }
+    
+                .ico-participant {
+                    margin-right: 3px;
+                    width: 16px;
+                    height: 16px;
+                }
+    
+                .user-name {
+                    max-width: 60px;
+                    font-size: 11px;
+                    color: $color-text30;
+                }
+            }
+    
+            .action {
+                position: relative;
+                width: 30px;
+                height: 100%;
+                border: 1px solid $opgg-color-border13;
+                background-color: $opgg-color-bg18;
+                img {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 9px;
+                }
+            }
         }
 
         &.lose {
             border: 1px solid $opgg-color-border12;
             background-color: $opgg-color-bg15;
-        }
-
-        .info {
-            width: 70px;
-            line-height: 16px;
-            font-size: 11px;
-            color: $color-text30;
-
-            .type {
-                font-weight: 700;
+            .info {
+                width: 70px;
+                line-height: 16px;
+                font-size: 11px;
+                white-space: nowrap;
+                color: $color-text30;
+    
+                .type {
+                    font-weight: 700;
+                }
+    
+                .bar {
+                    display: block;
+                    width: 28px;
+                    margin: 5px auto;
+                    height: 2px; 
+                    background-color: $opgg-color-border12;
+                }
+    
+                .game-result { 
+                    font-weight: 700;
+                    color: $opgg-color-percentage1;
+                }
             }
-
-            .bar {
-                display: block;
-                width: 28px;
-                margin: 5px auto;
-                height: 2px; 
-                background-color: $opgg-color-border11;
-            }
-
-            .game-result { 
-                font-weight: 700;
-                color: $opgg-color-border6;
-            }
-        }
-
-        .champion {
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            width: 100px;
-            height: 100%;
-
-            .setting {
+    
+            .champion {
                 display: flex;
-                .icon {
-                    .ico-champion {
-                        width: 46px;
-                        height: 46px;
-                        border-radius: 50%;
-                    }
-                }
-                
-                .spells {
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-left: 4px;
-                    .ico-spell {
-                        display: block;
-                        width: 22px;
-                        height: 22px;
-                        border-radius: 3px;
-                        overflow: hidden;
-                    }
-                }
-
-                .runes {
-                    .ico-rune {
-                        display: block;
-                        width: 22px;
-                        height: 22px;
-                    }
-                }
-            }
-
-            .name {
-                display: block;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                flex-shrink: 0;
                 width: 100px;
+                height: 100%;
+    
+                .setting {
+                    display: flex;
+                    .icon {
+                        .ico-champion {
+                            width: 46px;
+                            height: 46px;
+                            border-radius: 50%;
+                        }
+                    }
+                    
+                    .spells {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 4px;
+                        .ico-spell {
+                            display: block;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 3px;
+                            overflow: hidden;
+                        }
+                    }
+    
+                    .runes {
+                        .ico-rune {
+                            display: block;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+    
+                .name {
+                    display: block;
+                    width: 100px;
+                    text-align: center;
+                }
+    
+            }
+    
+            .kda {
+                width: 115px;
+                
+                .game-kda {
+                    font-size: 15px;
+                    white-space: nowrap;
+                    color: $color-text28;
+                    .kill {
+                        font-weight: 700;
+                        color: $color-text27;
+                    }
+    
+                    .death {
+                        font-weight: 700;
+                        color: $opgg-color-percentage1;
+                    }
+    
+                    .assist {
+                        font-weight: 700;
+                        color: $color-text27;
+                    }
+                }
+    
+                .total-score {
+                    margin-top: 6px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: $color-text27;
+                    span {
+                        color: $color-text31;
+                    }
+                }
+    
+                .multi-kill {
+                    display: inline-block;
+                    margin: 8px 4px 0;
+                    padding: 2px 5px;
+                    border: 1px solid $opgg-color-percentage1;
+                    border-radius: 15px;
+                    font-size: 10px;
+                    background-color: $opgg-color-bg17;
+                    color: #fff;
+                }
+            }
+    
+            .stats {
+                width: 90px;
+                font-size: 11px;
                 text-align: center;
+                line-height: 18px;
+                color: $color-text27;
+                .cs {
+                    margin: 0;
+                    font-size: 11px;
+                }
+                .kill-participation {
+                    color: $opgg-color-percentage1;
+                }
+                .mmr {
+                    b {
+                        color: $color-text31;
+                    }
+                }
             }
-
-        }
-
-        .kda {
-            width: 115px;
+    
+            .items {
+                width: 115px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        width: 72px;
+                        .ico-item {     
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 3px;
+                            margin-top: 2px;
+                            margin-right: 2px;
+                            overflow: hidden;
+                        }
+                    }
+                    div {
+                        .ward {
+                            margin-top: 2px;
+                            margin-right: 2px;
+                        }
+                        .build {
+                            margin-top: 2px;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+    
+                .control {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 8px;
+                    height: 16px;
+                    line-height: 13px;
+                    font-size: 11px;
+                    .ico-blueward {
+                        margin-right: 4px;
+                    }
+                }
+    
+                .ico-ward {
+                    border-radius: 3px;
+                    width: 22px;
+                    height: 22px;
+                }
+    
+                .ico-bluebuild {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
             
-            .game-kda {
-
+            .participants {
+                position: relative;
+                display: flex;
+                flex-shrink: 0;
+                width: 170px;
+                ul {
+                    float: left;
+                    width: 50%;
+                    li {
+                        @include ellipsis;
+                        width: 80px;
+                        height: 18px;
+                        margin-left: 3px;
+                        text-align: left;
+                        white-space: nowrap;
+                    }
+                }
+    
+                .ico-participant {
+                    margin-right: 3px;
+                    width: 16px;
+                    height: 16px;
+                }
+    
+                .user-name {
+                    max-width: 60px;
+                    font-size: 11px;
+                    color: $color-text30;
+                }
             }
-
-            .total-score {
-
-            }
-
-            .multi-kill {
-                display: inline-block;
-                padding: 2px 5px;
-                border: 1px solid $opgg-color-percentage1;
-                border-radius: 15px;
-                background-color: $opgg-color-bg17;
-                color: #fff;
+    
+            .action {
+                position: relative;
+                width: 30px;
+                height: 100%;
+                border: 1px solid $opgg-color-border14;
+                background-color: $opgg-color-bg19;
+                img {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 9px;
+                }
             }
         }
 
-        .stats {
-            width: 90px;
-        }
-
-        .items {
-            width: 115px;
-
-            .ico-item {
-                width: 22px;
-                height: 22px;
-            }
-
-            .ico-ward {
-                width: 22px;
-                height: 22px;
-            }
-
-            .ico-bluebuild {
-                width: 22px;
-                height: 22px;
-            }
-        }
         
-        .participants {
-            width: 170px;
-
-            .ico-participant {
-                width: 16px;
-                height: 16px;
-            }
-        }
-
-        .action {
-            width: 47px;
-        }
     }
 }

@@ -1854,23 +1854,19 @@ textarea::-webkit-outer-spin-button {
   background-color: #a5cfec;
 }
 
-.recent-log-group .recent-log-item.lose {
-  border: 1px solid #cea7a7;
-  background-color: #e2b6b4;
-}
-
-.recent-log-group .recent-log-item .info {
+.recent-log-group .recent-log-item.win .info {
   width: 70px;
   line-height: 16px;
   font-size: 11px;
+  white-space: nowrap;
   color: #555555;
 }
 
-.recent-log-group .recent-log-item .info .type {
+.recent-log-group .recent-log-item.win .info .type {
   font-weight: 700;
 }
 
-.recent-log-group .recent-log-item .info .bar {
+.recent-log-group .recent-log-item.win .info .bar {
   display: block;
   width: 28px;
   margin: 5px auto;
@@ -1878,15 +1874,21 @@ textarea::-webkit-outer-spin-button {
   background-color: #99b9cf;
 }
 
-.recent-log-group .recent-log-item .info .game-result {
+.recent-log-group .recent-log-item.win .info .game-result {
   font-weight: 700;
   color: #1a78ae;
 }
 
-.recent-log-group .recent-log-item .champion {
+.recent-log-group .recent-log-item.win .champion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1897,25 +1899,25 @@ textarea::-webkit-outer-spin-button {
   height: 100%;
 }
 
-.recent-log-group .recent-log-item .champion .setting {
+.recent-log-group .recent-log-item.win .champion .setting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.recent-log-group .recent-log-item .champion .setting .icon .ico-champion {
+.recent-log-group .recent-log-item.win .champion .setting .icon .ico-champion {
   width: 46px;
   height: 46px;
   border-radius: 50%;
 }
 
-.recent-log-group .recent-log-item .champion .setting .spells {
+.recent-log-group .recent-log-item.win .champion .setting .spells {
   display: inline-block;
   vertical-align: middle;
   margin-left: 4px;
 }
 
-.recent-log-group .recent-log-item .champion .setting .spells .ico-spell {
+.recent-log-group .recent-log-item.win .champion .setting .spells .ico-spell {
   display: block;
   width: 22px;
   height: 22px;
@@ -1923,65 +1925,508 @@ textarea::-webkit-outer-spin-button {
   overflow: hidden;
 }
 
-.recent-log-group .recent-log-item .champion .setting .runes .ico-rune {
+.recent-log-group .recent-log-item.win .champion .setting .runes .ico-rune {
   display: block;
   width: 22px;
   height: 22px;
+  border-radius: 50%;
 }
 
-.recent-log-group .recent-log-item .champion .name {
+.recent-log-group .recent-log-item.win .champion .name {
   display: block;
   width: 100px;
   text-align: center;
 }
 
-.recent-log-group .recent-log-item .kda {
+.recent-log-group .recent-log-item.win .kda {
   width: 115px;
 }
 
-.recent-log-group .recent-log-item .kda .multi-kill {
+.recent-log-group .recent-log-item.win .kda .game-kda {
+  font-size: 15px;
+  white-space: nowrap;
+  color: #879292;
+}
+
+.recent-log-group .recent-log-item.win .kda .game-kda .kill {
+  font-weight: 700;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.win .kda .game-kda .death {
+  font-weight: 700;
+  color: #c6443e;
+}
+
+.recent-log-group .recent-log-item.win .kda .game-kda .assist {
+  font-weight: 700;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.win .kda .total-score {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.win .kda .total-score span {
+  color: #353a3a;
+}
+
+.recent-log-group .recent-log-item.win .kda .multi-kill {
   display: inline-block;
+  margin: 8px 4px 0;
   padding: 2px 5px;
   border: 1px solid #c6443e;
   border-radius: 15px;
+  font-size: 10px;
   background-color: #ef5a52;
   color: #fff;
 }
 
-.recent-log-group .recent-log-item .stats {
+.recent-log-group .recent-log-item.win .stats {
   width: 90px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 18px;
+  color: #555e5e;
 }
 
-.recent-log-group .recent-log-item .items {
+.recent-log-group .recent-log-item.win .stats .cs {
+  margin: 0;
+  font-size: 11px;
+}
+
+.recent-log-group .recent-log-item.win .stats .kill-participation {
+  color: #c6443e;
+}
+
+.recent-log-group .recent-log-item.win .stats .mmr b {
+  color: #353a3a;
+}
+
+.recent-log-group .recent-log-item.win .items {
   width: 115px;
 }
 
-.recent-log-group .recent-log-item .items .ico-item {
+.recent-log-group .recent-log-item.win .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recent-log-group .recent-log-item.win .items .item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 72px;
+}
+
+.recent-log-group .recent-log-item.win .items .item ul .ico-item {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  margin-top: 2px;
+  margin-right: 2px;
+  overflow: hidden;
+}
+
+.recent-log-group .recent-log-item.win .items .item div .ward {
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.recent-log-group .recent-log-item.win .items .item div .build {
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.recent-log-group .recent-log-item.win .items .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8px;
+  height: 16px;
+  line-height: 13px;
+  font-size: 11px;
+}
+
+.recent-log-group .recent-log-item.win .items .control .ico-blueward {
+  margin-right: 4px;
+}
+
+.recent-log-group .recent-log-item.win .items .ico-ward {
+  border-radius: 3px;
   width: 22px;
   height: 22px;
 }
 
-.recent-log-group .recent-log-item .items .ico-ward {
+.recent-log-group .recent-log-item.win .items .ico-bluebuild {
   width: 22px;
   height: 22px;
 }
 
-.recent-log-group .recent-log-item .items .ico-bluebuild {
-  width: 22px;
-  height: 22px;
-}
-
-.recent-log-group .recent-log-item .participants {
+.recent-log-group .recent-log-item.win .participants {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 170px;
 }
 
-.recent-log-group .recent-log-item .participants .ico-participant {
+.recent-log-group .recent-log-item.win .participants ul {
+  float: left;
+  width: 50%;
+}
+
+.recent-log-group .recent-log-item.win .participants ul li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80px;
+  height: 18px;
+  margin-left: 3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.recent-log-group .recent-log-item.win .participants .ico-participant {
+  margin-right: 3px;
   width: 16px;
   height: 16px;
 }
 
-.recent-log-group .recent-log-item .action {
-  width: 47px;
+.recent-log-group .recent-log-item.win .participants .user-name {
+  max-width: 60px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.recent-log-group .recent-log-item.win .action {
+  position: relative;
+  width: 30px;
+  height: 100%;
+  border: 1px solid #4aa1d2;
+  background-color: #64b1e4;
+}
+
+.recent-log-group .recent-log-item.win .action img {
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
+}
+
+.recent-log-group .recent-log-item.lose {
+  border: 1px solid #cea7a7;
+  background-color: #e2b6b4;
+}
+
+.recent-log-group .recent-log-item.lose .info {
+  width: 70px;
+  line-height: 16px;
+  font-size: 11px;
+  white-space: nowrap;
+  color: #555555;
+}
+
+.recent-log-group .recent-log-item.lose .info .type {
+  font-weight: 700;
+}
+
+.recent-log-group .recent-log-item.lose .info .bar {
+  display: block;
+  width: 28px;
+  margin: 5px auto;
+  height: 2px;
+  background-color: #cea7a7;
+}
+
+.recent-log-group .recent-log-item.lose .info .game-result {
+  font-weight: 700;
+  color: #c6443e;
+}
+
+.recent-log-group .recent-log-item.lose .champion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100px;
+  height: 100%;
+}
+
+.recent-log-group .recent-log-item.lose .champion .setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recent-log-group .recent-log-item.lose .champion .setting .icon .ico-champion {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.recent-log-group .recent-log-item.lose .champion .setting .spells {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.recent-log-group .recent-log-item.lose .champion .setting .spells .ico-spell {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.recent-log-group .recent-log-item.lose .champion .setting .runes .ico-rune {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.recent-log-group .recent-log-item.lose .champion .name {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+.recent-log-group .recent-log-item.lose .kda {
+  width: 115px;
+}
+
+.recent-log-group .recent-log-item.lose .kda .game-kda {
+  font-size: 15px;
+  white-space: nowrap;
+  color: #879292;
+}
+
+.recent-log-group .recent-log-item.lose .kda .game-kda .kill {
+  font-weight: 700;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.lose .kda .game-kda .death {
+  font-weight: 700;
+  color: #c6443e;
+}
+
+.recent-log-group .recent-log-item.lose .kda .game-kda .assist {
+  font-weight: 700;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.lose .kda .total-score {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.lose .kda .total-score span {
+  color: #353a3a;
+}
+
+.recent-log-group .recent-log-item.lose .kda .multi-kill {
+  display: inline-block;
+  margin: 8px 4px 0;
+  padding: 2px 5px;
+  border: 1px solid #c6443e;
+  border-radius: 15px;
+  font-size: 10px;
+  background-color: #ef5a52;
+  color: #fff;
+}
+
+.recent-log-group .recent-log-item.lose .stats {
+  width: 90px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 18px;
+  color: #555e5e;
+}
+
+.recent-log-group .recent-log-item.lose .stats .cs {
+  margin: 0;
+  font-size: 11px;
+}
+
+.recent-log-group .recent-log-item.lose .stats .kill-participation {
+  color: #c6443e;
+}
+
+.recent-log-group .recent-log-item.lose .stats .mmr b {
+  color: #353a3a;
+}
+
+.recent-log-group .recent-log-item.lose .items {
+  width: 115px;
+}
+
+.recent-log-group .recent-log-item.lose .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recent-log-group .recent-log-item.lose .items .item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 72px;
+}
+
+.recent-log-group .recent-log-item.lose .items .item ul .ico-item {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  margin-top: 2px;
+  margin-right: 2px;
+  overflow: hidden;
+}
+
+.recent-log-group .recent-log-item.lose .items .item div .ward {
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.recent-log-group .recent-log-item.lose .items .item div .build {
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.recent-log-group .recent-log-item.lose .items .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8px;
+  height: 16px;
+  line-height: 13px;
+  font-size: 11px;
+}
+
+.recent-log-group .recent-log-item.lose .items .control .ico-blueward {
+  margin-right: 4px;
+}
+
+.recent-log-group .recent-log-item.lose .items .ico-ward {
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.recent-log-group .recent-log-item.lose .items .ico-bluebuild {
+  width: 22px;
+  height: 22px;
+}
+
+.recent-log-group .recent-log-item.lose .participants {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 170px;
+}
+
+.recent-log-group .recent-log-item.lose .participants ul {
+  float: left;
+  width: 50%;
+}
+
+.recent-log-group .recent-log-item.lose .participants ul li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80px;
+  height: 18px;
+  margin-left: 3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.recent-log-group .recent-log-item.lose .participants .ico-participant {
+  margin-right: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.recent-log-group .recent-log-item.lose .participants .user-name {
+  max-width: 60px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.recent-log-group .recent-log-item.lose .action {
+  position: relative;
+  width: 30px;
+  height: 100%;
+  border: 1px solid #d67b77;
+  background-color: #e89d99;
+}
+
+.recent-log-group .recent-log-item.lose .action img {
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
 }
 
 .container {

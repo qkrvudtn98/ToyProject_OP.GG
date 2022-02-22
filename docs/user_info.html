@@ -426,7 +426,7 @@
 
                         <div class="log-type-menu">
                             <div class="log-type-group">
-                                <div class="type-total">전체</div>
+                                <div class="type-total is-active">전체</div>
                                 <div class="type-solo">솔로랭크</div>
                                 <div class="type-free">자유랭크</div>
                                 <div class="type-queue">
@@ -480,7 +480,7 @@
                                     <div class="txt-area">
                                         <span class="name">레오나</span><br>
                                         <span class="percentage">80%</span>
-                                        <span>(4승 1패)</span>
+                                        <span class="win-lose">(4승 1패)</span>
                                         <span class="total-score">2.79 평점</span>
                                     </div>
                                 </div>
@@ -489,7 +489,7 @@
                                     <div class="txt-area">
                                         <span class="name">노틸러스</span><br>
                                         <span class="percentage">67%</span>
-                                        <span>(2승 1패)</span>
+                                        <span class="win-lose">(2승 1패)</span>
                                         <span class="total-score">5.25 평점</span>
                                     </div>
                                 </div>
@@ -498,7 +498,7 @@
                                     <div class="txt-area">
                                         <span class="name">모데카이저</span><br>
                                         <span class="percentage">0%</span>
-                                        <span>(0승 2패)</span>
+                                        <span class="win-lose">(0승 2패)</span>
                                         <span class="total-score">2.29 평점</span>
                                     </div>
                                 </div>
@@ -506,20 +506,26 @@
 
                             <div class="recent-favorite-position">
                                 <span class="title">선호 포지션 (랭크)</span>
-                                <div class="fav-position">
-                                    <img src="../assets/images/icon-mostposition-support.png" alt="">
-                                    <div class="txt-area">
-                                        <span>서포터</span><br>
-                                        <span>67%</span><span>승률 75%</span>
-                                    </div>
-                                </div>
-                                <div class="fav-position">
-                                    <img src="../assets/images/icon-mostposition-top.png" alt="">
-                                    <div class="txt-area">
-                                        <span>탑</span><br>
-                                        <span>25%</span><span>승률 0%</span>
-                                    </div>
-                                </div>
+                                <ul class="fav-position">
+                                    <li class="position-item">
+                                        <div class="icon">
+                                            <img src="../assets/images/icon-mostposition-support.png" alt="">
+                                        </div>
+                                        <div class="txt-area">
+                                            <span class="name">서포터</span><br>
+                                            <span class="pickrate">67%</span><span class="winrate">승률 75%</span>
+                                        </div>
+                                    </li>
+                                    <li class="position-item">
+                                        <div class="icon">
+                                            <img src="../assets/images/icon-mostposition-top.png" alt="">
+                                        </div>
+                                        <div class="txt-area">
+                                            <span class="name">탑</span><br>
+                                            <span class="pickrate">25%</span><span class="winrate">승률 0%</span>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 

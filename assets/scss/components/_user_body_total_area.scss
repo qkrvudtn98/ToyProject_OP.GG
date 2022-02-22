@@ -314,6 +314,7 @@
             width: 690px;
 
             .log-type-menu {
+                position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -322,11 +323,69 @@
                 border: 1px solid $opgg-color-border9;
                 border-bottom: 1px solid $opgg-color-border9;
                 border-radius: 2px;
-                box-shadow: 0 1px $opgg-color-border8;
-                background-color: $opgg-color-bg12;
+                box-shadow: $opgg-color-border8 0 1px;
+                background-color: #fff;
 
                 .log-type-group {
                     display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding-left: 10px;
+                    .type-total {
+                        margin: 0 10px;
+                        height: 32px;
+                        line-height: 36px;
+                        vertical-align: top;
+                        &.is-active {
+                            border-bottom: 2px solid $opgg-color-bg9;
+                            color: $opgg-color-bg9;
+                            z-index: 1;
+                        }
+                    }
+                    .type-solo {
+                        margin: 0 10px;
+                        height: 32px;
+                        line-height: 36px;
+                        font-size: 12px;
+                        vertical-align: top;
+                        color: $color-text27;
+                    }
+                    .type-free {
+                        margin: 0 10px;
+                        height: 32px;
+                        line-height: 36px;
+                        font-size: 12px;
+                        vertical-align: top;
+                        color: $color-text27;
+                    }
+                    .type-queue {
+                        @include ellipsis;
+                        margin: 0 10px;
+                        height: 32px;
+                        line-height: 36px;
+                        vertical-align: top;
+                        select {
+                            font-size: 12px;
+                            outline: none;
+                            background: url(https://s-lol-web.op.gg/static/images/icon/common/bg-selectArrow-small.png)93% center no-repeat; 
+                            color: $color-text28;
+                        }
+                    }
+                }
+
+                .search-area {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 8px 8px 9px 9px;
+                    height: 34px;
+                    border-left: 1px solid $opgg-color-border9;
+                    .champion-search{
+                        font-size: 13px;
+                        border: none;
+                        outline: none;
+                        color: $color-text32;
+                    }
                 }
             }
 
@@ -344,20 +403,114 @@
                 }
 
                 .recent-champion {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
                     width: 230px;
-                    border-right: 1px solid $opgg-color-border9;
+
                     .champion-area {
                         display: flex;
+                        flex: 1;
+                        align-items: center;
+
                         .ico-champion {
                             width: 34px;
                             height: 34px;
                             border-radius: 50%;
                         }
+
+                        .txt-area {
+                            margin-left: 6px;
+
+                            .name {
+                                margin-bottom: 2px;
+                                line-height: 16px;
+                                font-size: 14px;
+                            }
+                            
+                            .win-lose,
+                            .percentage {
+                                line-height: 12px;
+                                font-size: 11px;
+                                color: $opgg-color-bg16;
+                            }
+
+                            .total-score {
+                                line-height: 12px;
+                                font-size: 11px;
+                                font-weight: 700;
+                                color: $opgg-color-bg16;
+                                &::before {
+                                    content: '';
+                                    margin-left: 6px;
+                                    margin-right: 6px;
+                                    border-left: 1px solid $opgg-color-bg8;
+                                }
+                            }
+                        }
                     }
                 }
 
                 .recent-favorite-position {
+                    display: flex;
+                    flex-direction: column;
                     width: 180px;
+                    border-left: 1px solid $opgg-color-border9;
+                    .title {
+                        padding: 16px 0px 14px 20px;
+                        line-height: 14px;
+                        font-size: 12px;
+                        color: $color-text8;
+                    }
+                    .fav-position {
+                        padding: 0px 16px 0px 12px;
+                        flex: 1;
+                        .position-item {
+                            display: flex;
+                            align-items: center;
+                            &:last-child {
+                                margin-top: 16px;
+                            }
+                            .icon {
+                                display: inline-block;
+                                width: 36px;
+                                height: 34px;
+                                vertical-align: middle;
+                                text-align: center;
+                            }
+                            .txt-area {
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-left: 4px;
+                                padding-bottom: 1px;
+                                .name {
+                                    line-height: 16px;
+                                    font-size: 14px;
+                                    color: $color-text15;
+                                }
+                                .pickrate {
+                                    line-height: 12px;
+                                    font-size: 11px;
+                                    font-weight: 700;
+                                    color: $opgg-color-bg9;
+                                }
+                                .winrate {
+                                    line-height: 12px;
+                                    font-size: 11px;
+                                    color: $color-text8;
+                                    &::before {
+                                        content: '';
+                                        margin-left: 6px;
+                                        margin-right: 6px;
+                                        border-left: 1px solid $opgg-color-bg8;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 

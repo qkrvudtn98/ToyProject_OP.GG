@@ -1637,6 +1637,7 @@ textarea::-webkit-outer-spin-button {
 }
 
 .user-body-area .user-game-area .user-log-area .log-type-menu {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1651,15 +1652,85 @@ textarea::-webkit-outer-spin-button {
   border: 1px solid #cdd2d2;
   border-bottom: 1px solid #cdd2d2;
   border-radius: 2px;
-  -webkit-box-shadow: 0 1px #dcdfdf;
-          box-shadow: 0 1px #dcdfdf;
-  background-color: #f2f2f2;
+  -webkit-box-shadow: #dcdfdf 0 1px;
+          box-shadow: #dcdfdf 0 1px;
+  background-color: #fff;
 }
 
 .user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 10px;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group .type-total {
+  margin: 0 10px;
+  height: 32px;
+  line-height: 36px;
+  vertical-align: top;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group .type-total.is-active {
+  border-bottom: 2px solid #1f8ecd;
+  color: #1f8ecd;
+  z-index: 1;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group .type-solo {
+  margin: 0 10px;
+  height: 32px;
+  line-height: 36px;
+  font-size: 12px;
+  vertical-align: top;
+  color: #555e5e;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group .type-free {
+  margin: 0 10px;
+  height: 32px;
+  line-height: 36px;
+  font-size: 12px;
+  vertical-align: top;
+  color: #555e5e;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group .type-queue {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 10px;
+  height: 32px;
+  line-height: 36px;
+  vertical-align: top;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .log-type-group .type-queue select {
+  font-size: 12px;
+  outline: none;
+  background: url(https://s-lol-web.op.gg/static/images/icon/common/bg-selectArrow-small.png) 93% center no-repeat;
+  color: #879292;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .search-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 8px 9px 9px;
+  height: 34px;
+  border-left: 1px solid #cdd2d2;
+}
+
+.user-body-area .user-game-area .user-log-area .log-type-menu .search-area .champion-search {
+  font-size: 13px;
+  border: none;
+  outline: none;
+  color: #999999;
 }
 
 .user-body-area .user-game-area .user-log-area .recent-log {
@@ -1680,14 +1751,34 @@ textarea::-webkit-outer-spin-button {
 }
 
 .user-body-area .user-game-area .user-log-area .recent-log .recent-champion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
   width: 230px;
-  border-right: 1px solid #cdd2d2;
 }
 
 .user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .ico-champion {
@@ -1696,8 +1787,115 @@ textarea::-webkit-outer-spin-button {
   border-radius: 50%;
 }
 
+.user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .txt-area {
+  margin-left: 6px;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .txt-area .name {
+  margin-bottom: 2px;
+  line-height: 16px;
+  font-size: 14px;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .txt-area .win-lose,
+.user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .txt-area .percentage {
+  line-height: 12px;
+  font-size: 11px;
+  color: #333333;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .txt-area .total-score {
+  line-height: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-champion .champion-area .txt-area .total-score::before {
+  content: '';
+  margin-left: 6px;
+  margin-right: 6px;
+  border-left: 1px solid #e0e3e3;
+}
+
 .user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 180px;
+  border-left: 1px solid #cdd2d2;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .title {
+  padding: 16px 0px 14px 20px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #666666;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position {
+  padding: 0px 16px 0px 12px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item:last-child {
+  margin-top: 16px;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item .icon {
+  display: inline-block;
+  width: 36px;
+  height: 34px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item .txt-area {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  padding-bottom: 1px;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item .txt-area .name {
+  line-height: 16px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item .txt-area .pickrate {
+  line-height: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1f8ecd;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item .txt-area .winrate {
+  line-height: 12px;
+  font-size: 11px;
+  color: #666666;
+}
+
+.user-body-area .user-game-area .user-log-area .recent-log .recent-favorite-position .fav-position .position-item .txt-area .winrate::before {
+  content: '';
+  margin-left: 6px;
+  margin-right: 6px;
+  border-left: 1px solid #e0e3e3;
 }
 
 .user-body-area .user-game-area .user-log-area .beta-info {

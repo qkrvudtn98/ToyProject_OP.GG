@@ -78,7 +78,7 @@
                     <a href="#" class="btn-menu">홈</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="btn-menu">챔피언분석</a>
+                    <a href="./champion_info.html" class="btn-menu">챔피언분석</a>
                 </li>
                 <li class="menu-item knife-wind">
                     <a href="#" class="btn-menu">칼바람</a>
@@ -370,5 +370,17 @@
                 </button>
         </div>
     </div>
+
+    <script>
+        // 즐겨찾기란의 소환사 삭제 기능 동적 구현 
+        function closeElement(param) {
+            document.querySelector(param).style.display = 'none';
+        }
+        // 문제점 : 함수를 정해주어 요소에 접근하였는데, .tab-item이라고 두니 한번 삭제할때마다 어떤 버튼을 누르던지 맨 앞의 item만이 삭제되고 나머지 item들에는 적용되지 않았다. 이 문제 내일 (2/26까지 해결해야함!!)
+        
+    </script>
 </body>
 </html>
+
+<!-- 2022.02.25 작업
+- header 챔피언 분석 버튼 누르면 champion-info페이지로 이동할 수 있게 링크 설정 -->

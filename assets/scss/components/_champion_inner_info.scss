@@ -1,0 +1,39 @@
+.inner-area {
+    @include common-inner;
+
+    .inner-top {
+        display: flex;
+        justify-content: space-between;
+        .position {
+            display: flex;
+            .main-pos {
+                display: flex;
+                justify-content: space-between;
+            }
+            .sub-pos {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .version {
+            display: flex;
+        }
+    }
+
+    .inner-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .info-area {
+            display: flex;
+        }
+
+        .against-area {
+            display: flex;
+            flex-direction: column;
+            .index {
+                display: flex;
+            }
+        }
+    }
+}

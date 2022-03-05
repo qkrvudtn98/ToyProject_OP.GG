@@ -150,12 +150,12 @@
 
                     <!-- 최근 검색 밑의 영역 -->
                     <div class="tab-group1 is-active">
-                        <div class="tab-item">
+                        <div class="tab-item" onclick="closeElement('none')">
                             <a href="#" class="user-name">좋아죽는중년세혁</a>
                             <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
                             <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
                         </div>
-                        <div class="tab-item">
+                        <div class="tab-item" onclick="closeElement('none')">
                             <a href="#" class="user-name">최선을다해이기자</a>
                             <a href="#"><img src="../assets/images/icon-favorite-off.png" alt="" class="ico-star"></a>
                             <a href="#"><img src="../assets/images/icon-history-delete.png" alt="" class="ico-delete"></a>
@@ -372,12 +372,12 @@
     </div>
 
     <script>
-        // 즐겨찾기란의 소환사 삭제 기능 동적 구현 
-        function closeElement(param) {
-            document.querySelector(param).style.display = 'none';
+        // 소환사 검색 영역 즐겨찾기 여닫는 기능 구현 (3/5)
+        function toggle () {
+            document.querySelectorAll('.tab-area')[0].classList.toggle('hidden');
         }
-        // 문제점 : 함수를 정해주어 요소에 접근하였는데, .tab-item이라고 두니 한번 삭제할때마다 어떤 버튼을 누르던지 맨 앞의 item만이 삭제되고 나머지 item들에는 적용되지 않았다. 이 문제 내일 (2/26까지 해결해야함!!)
-        
+
+        document.querySelectorAll('.btn-country2')[0].addEventListener('click',toggle);
     </script>
 </body>
 </html>

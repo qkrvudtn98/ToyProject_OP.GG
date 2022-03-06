@@ -1,0 +1,12 @@
+.body-category-area {
+    display: block;
+    background-color: #fff;
+    .category-group {
+        @include common-inner;
+        display: flex;
+    }
+}
+
+.body-area {
+    display: flex;
+}

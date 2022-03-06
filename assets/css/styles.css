@@ -567,6 +567,26 @@ textarea::-webkit-outer-spin-button {
   width: 60px;
 }
 
+.body-category-area {
+  display: block;
+  background-color: #fff;
+}
+
+.body-category-area .category-group {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .inner-section {
   display: block;
   background-color: #2a2d3a;
@@ -3049,7 +3069,7 @@ textarea::-webkit-outer-spin-button {
   background-color: #5383e8;
 }
 
-.container.user, .container.champion {
+.container.user, .container.champion, .container.champion-build {
   background-color: #eaeaea;
 }
 

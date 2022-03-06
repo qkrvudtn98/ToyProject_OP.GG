@@ -5,7 +5,8 @@
         background-color: $opgg-color-bg1;
     }
     &.user,
-    &.champion {
+    &.champion,
+    &.champion-build {
         background-color: $opgg-color-bg6;
     }
 }

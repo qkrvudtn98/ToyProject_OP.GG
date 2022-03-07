@@ -734,6 +734,128 @@ textarea::-webkit-outer-spin-button {
 
 .body-area .main-area .recommendation-area .skill-build-area .title .plus {
   width: 58px;
+  text-align: center;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build {
+  padding: 10px 0 10px 20px;
+  width: 503px;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build .skill-master {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build .skill-master .skill-command-box {
+  position: relative;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build .skill-master .skill-command-box .skill-img {
+  height: 42px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build .skill-master .skill-command-box .skill-command {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 32px;
+  bottom: 4px;
+  width: 20px;
+  height: 20px;
+  letter-spacing: -0.5px;
+  border-radius: 1px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build table td {
+  width: 29px;
+  height: 29px;
+  line-height: 12px;
+  letter-spacing: -0.4px;
+  border: 1px solid #ced2d5;
+  font-size: 11px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build table td .skill-command-box {
+  position: relative;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build table td .skill-command-box img {
+  height: 29px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .skill-build table td .skill-command-box .skill-command {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 18px;
+  bottom: 4px;
+  width: 10px;
+  height: 10px;
+  letter-spacing: -0.5px;
+  border-radius: 1px;
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .pickrate {
+  width: 86px;
+  text-align: center;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .pickrate .ratio {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .pickrate .quantity {
+  margin-top: 3px;
+  line-height: 15px;
+  font-size: 13px;
+  color: #777777;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .skill-build-section .winrate {
+  width: 86px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #777777;
 }
 
 .body-area .main-area .blank {

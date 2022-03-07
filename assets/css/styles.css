@@ -581,10 +581,168 @@ textarea::-webkit-outer-spin-button {
   display: flex;
 }
 
+.advertisement-area {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
 .body-area {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.body-area .main-area {
+  width: 734px;
+}
+
+.body-area .main-area .recommendation-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 12px;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  background-color: #f5f5f5;
+}
+
+.body-area .main-area .recommendation-area .spell-area .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  line-height: 17px;
+  letter-spacing: -0.2px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #777777;
+}
+
+.body-area .main-area .recommendation-area .spell-area .title .txt {
+  width: 503px;
+  padding-left: 20px;
+  color: #28272c;
+}
+
+.body-area .main-area .recommendation-area .spell-area .title .pickrate,
+.body-area .main-area .recommendation-area .spell-area .title .winrate {
+  width: 86px;
+  text-align: center;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1 .spell,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 .spell {
+  padding: 10px 0 10px 20px;
+  width: 503px;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1 .spell img,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 .spell img {
+  margin-right: 20px;
+  width: 42px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1 .pickrate,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 .pickrate {
+  width: 86px;
+  text-align: center;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1 .pickrate .ratio,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 .pickrate .ratio {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1 .pickrate .quantity,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 .pickrate .quantity {
+  margin-top: 3px;
+  line-height: 15px;
+  font-size: 13px;
+  color: #777777;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set1 .winrate,
+.body-area .main-area .recommendation-area .spell-area .spell-set2 .winrate {
+  width: 86px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #777777;
+}
+
+.body-area .main-area .recommendation-area .spell-area .spell-set2 {
+  border-top: 3px solid #eaeaea;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  line-height: 17px;
+  letter-spacing: -0.2px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #777777;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .title .txt {
+  width: 503px;
+  padding-left: 20px;
+  color: #28272c;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .title .pickrate,
+.body-area .main-area .recommendation-area .skill-build-area .title .winrate {
+  width: 86px;
+  text-align: center;
+}
+
+.body-area .main-area .recommendation-area .skill-build-area .title .plus {
+  width: 58px;
+}
+
+.body-area .main-area .blank {
+  width: 58px;
+}
+
+.body-area .side-area {
+  margin-left: 8px;
+  width: 336px;
 }
 
 .inner-section {

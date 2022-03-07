@@ -7,6 +7,131 @@
     }
 }
 
+.advertisement-area {
+    @include common-inner;
+}
+
 .body-area {
+    @include common-inner;
     display: flex;
+
+    .main-area {
+        width: 734px;
+
+        .recommendation-area {
+            display: flex;
+            flex-direction: column;
+            margin-top: 12px;
+            width: 100%;
+            border: 1px solid $opgg-color-border17;
+            background-color: $opgg-color-bg24;
+            .spell-area {
+                .title {
+                    display: flex;
+                    align-items: center;
+                    height: 42px;
+                    line-height: 17px;
+                    letter-spacing: -0.2px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid $opgg-color-border17;
+                    font-size: 14px;
+                    font-weight: 700;
+                    background-color: #fff;
+                    color: $color-text16;
+                    .txt {
+                        width: 503px;
+                        padding-left: 20px;
+                        color: $color-text37;
+                    }
+                    .pickrate,
+                    .winrate {
+                        width: 86px;
+                        text-align: center;
+                    }
+                }
+                .spell-set1,
+                .spell-set2 {
+                    display: flex;
+                    align-items: center;
+                    .spell {
+                        padding: 10px 0 10px 20px;
+                        width: 503px;
+                        img {
+                            margin-right: 20px;
+                            width: 42px;
+                            border: 1px solid #000;
+                            border-radius: 2px;
+                        }
+                    }
+                    .pickrate {
+                        width: 86px;
+                        text-align: center;
+                        .ratio {
+                            font-size: 13px;
+                            font-weight: 700;
+                            color: $color-text7;
+                        }
+                        .quantity {
+                            margin-top: 3px;
+                            line-height: 15px;
+                            font-size: 13px;
+                            color: $color-text16;
+                        }
+                    }
+                    .winrate {
+                        width: 86px;
+                        text-align: center;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: $color-text16;
+                    }
+                }
+
+                .spell-set2 {
+                    border-top: 3px solid $opgg-color-bg6;
+                }
+
+            }
+            .skill-build-area {
+                .title {
+                    display: flex;
+                    align-items: center;
+                    height: 42px;
+                    line-height: 17px;
+                    letter-spacing: -0.2px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid $opgg-color-border17;
+                    font-size: 14px;
+                    font-weight: 700;
+                    background-color: #fff;
+                    color: $color-text16;
+                    .txt {
+                        width: 503px;
+                        padding-left: 20px;
+                        color: $color-text37;
+                    }
+                    .pickrate,
+                    .winrate {
+                        width: 86px;
+                        text-align: center;
+                    }
+                    .plus {
+                        width: 58px;
+                    }
+                }
+                .skill-build-section {
+
+                }
+            }
+        }
+
+        .blank {
+            width: 58px;
+        }
+    }
+
+    .side-area {
+        margin-left: 8px;
+        width: 336px;
+    }
 }
